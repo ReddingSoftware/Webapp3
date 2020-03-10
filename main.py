@@ -72,89 +72,42 @@ class MainPage(BaseHandler):
 app.secret_key = 'your-secret-key'
 
 
-#Here you'll change your old webapp2 handler to a Flask handler        
+#Here you'll change your old webapp2 handler to a Flask handler and call either the webappGet function or the webappPost function       
 @app.route('/',methods=['GET','POST'])    
 def MainDef():
     if request.method == 'GET':    
-        darequests=request.form
-        #you'll put your webapp2 class name here in each handler
         daPage= MainPage()
-        daPage.request=darequests
-        daPage.get()
-        if daPage.ChangePage=="None":
-            return daPage.data
-        else:
-            return redirect(daPage.ChangePage)
+        return webappGet(daPage)
+
     if request.method == 'POST':
-        darequests=request.form
         daPage= MainPage()
-        daPage.request=darequests
-        daPage.post()
-        if daPage.ChangePage=="None":
-            return daPage.data
-        else:
-            return redirect(daPage.ChangePage)
+        return webappPost(daPage)
 
 @app.route('/FirstPage',methods=['GET','POST'])    
 def FirstDef():
     if request.method == 'GET':    
-        darequests=request.form
         daPage= FirstPage()
-        daPage.request=darequests
-        daPage.get()
-        if daPage.ChangePage=="None":
-            return daPage.data
-        else:
-            return redirect(daPage.ChangePage)
+        return webappGet(daPage)
+
     if request.method == 'POST':
-        darequests=request.form
         daPage= FirstPage()
-        daPage.request=darequests
-        daPage.post()
-        if daPage.ChangePage=="None":
-            return daPage.data
-        else:
-            return redirect(daPage.ChangePage)
+        return webappPost(daPage)
 
 @app.route('/SecondPage',methods=['GET','POST'])    
 def SecondDef():
     if request.method == 'GET':    
-        darequests=request.form
         daPage= SecondPage()
-        daPage.request=darequests
-        daPage.get()
-        if daPage.ChangePage=="None":
-            return daPage.data
-        else:
-            return redirect(daPage.ChangePage)
+        return webappGet(daPage)
     if request.method == 'POST':
-        darequests=request.form
         daPage= SecondPage()
-        daPage.request=darequests
-        daPage.post()
-        if daPage.ChangePage=="None":
-            return daPage.data
-        else:
-            return redirect(daPage.ChangePage)
+        return webappPost(daPage)
 
 @app.route('/test',methods=['GET','POST'])    
 def TestDef():
     if request.method == 'GET':    
-        darequests=request.form
         daPage= Test()
-        daPage.request=darequests
-        daPage.get()
-        if daPage.ChangePage=="None":
-            return daPage.data
-        else:
-            return redirect(daPage.ChangePage)
+        return webappGet(daPage)
     if request.method == 'POST':
-        darequests=request.form
         daPage= Test()
-        daPage.request=darequests
-        daPage.post()
-        if daPage.ChangePage=="None":
-            return daPage.data
-        else:
-            return redirect(daPage.ChangePage)
+        return webappPost(daPage)
 
