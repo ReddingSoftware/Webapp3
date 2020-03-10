@@ -20,14 +20,14 @@ class SecondPage(BaseHandler):
         self.response.write("Second Page Post")
 
 
-class Test(BaseHandler):
+class Test(webapp2.RequestHandler):
     def get(self):
         self.response.write("Test Page Get")
     def post(self):
         self.response.write("Test Page Post")
 
 #Example of session The session is converted to a Flask session
-class MainPage(BaseHandler):
+class MainPage(webapp2.RequestHandler):
     def get(self):  
         self.session["name"]="Some Name"
         self.session["phone"]="8675309"
