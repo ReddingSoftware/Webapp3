@@ -8,7 +8,8 @@ class Response:
     self.handler.data += stuffAdd
 
 
-
+#this replaces your webapp2 base handler and makes it so that your webapp2 syntax will work and run on 
+#Python3 using Flask instead of webapp2
 class BaseHandler:
   def __init__(self):
     self.data = ""
