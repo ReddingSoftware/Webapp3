@@ -1,7 +1,5 @@
 from flask import Flask, session,request,redirect
 from daBaseHandler import *
-#from HTMLstuff import *
-#from frontPageTest import *
 
 
 app = Flask(__name__)
@@ -21,9 +19,9 @@ class SecondPage(BaseHandler):
 
 class Test(BaseHandler):
     def get(self):
-        self.response.write("Second Page Post")
+        self.response.write("Test Page Get")
     def post(self):
-        self.response.write("Second Page Post")
+        self.response.write("Test Page Post")
 
 
 class MainPage(BaseHandler):
@@ -68,11 +66,12 @@ class MainPage(BaseHandler):
 app.secret_key = 'your-secret-key'
 
 
-        
+#Here you'll change your old webapp2 handler to a Flask handler        
 @app.route('/',methods=['GET','POST'])    
 def MainDef():
     if request.method == 'GET':    
         darequests=request.form
+        #you'll your webapp2 class name here in each handler
         daPage= MainPage()
         daPage.request=darequests
         daPage.get()
