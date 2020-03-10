@@ -77,7 +77,7 @@ app.secret_key = 'your-secret-key'
 def MainDef():
     if request.method == 'GET':    
         darequests=request.form
-        #you'll your webapp2 class name here in each handler
+        #you'll put your webapp2 class name here in each handler
         daPage= MainPage()
         daPage.request=darequests
         daPage.get()
