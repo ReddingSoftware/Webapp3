@@ -8,6 +8,7 @@ If you are doing a pip install it is recommended that you install it using pip3 
 Also, if you pip install you must use: 
 
 import webapp3
+
 from webapp3.webapp3 import *
 
 or
