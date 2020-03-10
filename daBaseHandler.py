@@ -8,8 +8,9 @@ class Response:
     self.handler.data += stuffAdd
 
 
-#this replaces your webapp2 base handler and makes it so that your webapp2 syntax will work and run on 
-#Python3 using Flask instead of webapp2
+#this replaces your webapp2 base handler and makes it so that most of your webapp2 syntax will work and run on 
+#Python3 using Flask instead of webapp2. It allows you to do self.response.write("whatever"), sessions, and redirects
+
 class BaseHandler:
   def __init__(self):
     self.data = ""
