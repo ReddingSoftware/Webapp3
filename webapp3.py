@@ -21,6 +21,19 @@ class BaseHandler:
   def redirect(self,arg):
     self.ChangePage=arg
 
+class RequestHandler:
+  def __init__(self):
+    self.data = ""
+    self.ChangePage="None"
+    self.response = Response(self)
+    self.session = session
+    self.request= {}
+  def redirect(self,arg):
+    self.ChangePage=arg
+
+class webapp2:
+  RequestHandler = RequestHandler
+
 
 
 def webappGet(daPage):
