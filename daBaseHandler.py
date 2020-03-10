@@ -23,6 +23,23 @@ class BaseHandler:
 
 
 
+def webappGet(daPage):
+    darequests=request.form
+    daPage.request=darequests
+    daPage.get()
+    if daPage.ChangePage=="None":
+        return daPage.data
+    else:
+        return redirect(daPage.ChangePage)
+
+def webappPost(daPage):
+    darequests=request.form
+    daPage.request=darequests
+    daPage.post()
+    if daPage.ChangePage=="None":
+        return daPage.data
+    else:
+        return redirect(daPage.ChangePage)
     
 
 
