@@ -4,6 +4,9 @@ from daBaseHandler import *
 
 app = Flask(__name__)
 
+#start Examples of webapp2 classes
+
+#Example redirect
 class FirstPage(BaseHandler):
     def get(self):
         self.redirect("/SecondPage")
@@ -23,7 +26,7 @@ class Test(BaseHandler):
     def post(self):
         self.response.write("Test Page Post")
 
-
+#Example of session The session is converted to a Flask session
 class MainPage(BaseHandler):
     def get(self):  
         self.session["name"]="Some Name"
@@ -62,7 +65,10 @@ class MainPage(BaseHandler):
         </body>
         </html>
         """)
-
+        
+#End Examples of webapp2 classes
+     
+        
 app.secret_key = 'your-secret-key'
 
 
