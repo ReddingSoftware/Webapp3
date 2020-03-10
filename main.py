@@ -1,5 +1,10 @@
 from flask import Flask, session,request,redirect
 from webapp3 import *
+#if you are doing pip3 install webapp3-flask==0.1.0 you must use the following method to import it into your file
+#import webapp3
+#from webapp3.webapp3 import *
+#also we recommend that you install it using your requirements.txt
+
 
 
 app = Flask(__name__)
