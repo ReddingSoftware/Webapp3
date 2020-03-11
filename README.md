@@ -1,8 +1,8 @@
 # Webapp3
 
-This is a way for people to convert their old webapp2 classes to make them work with python3 using Flask
+This is a way for people to convert their old webapp2 classes to make them work with Python 3 using Flask. It allows you to use webapp2 syntax in Python 3.
 
-You can view the source code at https://github.com/ReddingSoftware/Webapp3 The github version is a complete program to demonstrate usage. If you are downloading from github you only need the webapp3.py file.
+You can view the source code at https://github.com/ReddingSoftware/Webapp3 The github version is a complete program to demonstrate usage. If you are downloading from github to make the syntax of an existing program work with Python 3, you only need the webapp3.py file. Alternativly you can pip install instead.
 
 You can install this module using 
 
