@@ -1,21 +1,21 @@
 # Webapp3
+
 This is a way for people to convert their old webapp2 classes to make them work with python3 using Flask
 
-You can also install using pip3 install webapp3-flask==0.1.0
+You can view the source code at https://github.com/ReddingSoftware/Webapp3 The github version is a complete program to demonstrate usage. If you are downloading from github you only need the webapp3.py file.
 
-If you are doing a pip install it is recommended that you install it using pip3 install  -r requirements.txt and listing webapp3-flask==0.1.0 in your requirements.txt
+You can install this module using pip3 install webapp3-flask
 
-Also, if you pip install you must use: 
+You also need to list the latest version in your requirements.txt
+For Google App Engine you also need to pip install it to your lib file using 
+pip3 install -t lib -r requirements.txt
 
-import webapp3
+Also, if you pip install you must use:
 
-from webapp3.webapp3 import *
+from webapp3 import *
 
 or
 
-import webapp3
+from webapp3 import BaseHandler,webapp2,RequestHandler,webappGet,webappPost
 
-from webapp3.webapp3 import Response,BaseHandler, RequestHandler,webapp2,webappGet,webappPost
-
-
-Here is a quick YouTube video demonstrating how to use this https://youtu.be/_zWU9e2V8WQ
+Here is a quick YouTube video demonstrating how to use this module https://youtu.be/P_B1Mu9p0cg
