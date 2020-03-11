@@ -1,8 +1,12 @@
+#This file is just an example file to demonstrate how the webapp3-flask module works
+
 from flask import Flask, session,request,redirect
 from webapp3 import *
-#if you are doing pip3 install webapp3-flask==0.1.0 you must use the following method to import it into your file
-#import webapp3
-#from webapp3.webapp3 import *
+#or you can use
+#from webapp3 import BaseHandler,webapp2,RequestHandler,webappGet,webappPost
+
+#Make sure to pip install it first using
+#pip3 install webapp3-flask 
 #also we recommend that you install it using your requirements.txt
 
 
@@ -80,7 +84,8 @@ app.secret_key = 'your-secret-key'
 #Here you'll change your old webapp2 handler to a Flask handler and call either the webappGet function or the webappPost function       
 @app.route('/',methods=['GET','POST'])    
 def MainDef():
-    if request.method == 'GET':    
+    if request.method == 'GET':
+        #here you'll create an instince of each class you want to use and then pass the instance through webappGet or webappPost
         daPage= MainPage()
         return webappGet(daPage)
 
