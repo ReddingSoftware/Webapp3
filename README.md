@@ -8,6 +8,8 @@ You can install this module using
 
 pip3 install webapp3-flask
 
+To find out the latest version go to https://pypi.org/project/webapp3-flask/
+
 You also need to list the latest version in your requirements.txt
 For Google App Engine you also need to pip install it to your lib file using 
 
