@@ -10,7 +10,7 @@ from webapp3 import *
 #also we recommend that you install it using your requirements.txt
 
 
-
+#make sure to add this
 app = Flask(__name__)
 
 #start Examples of webapp2 classes
@@ -77,21 +77,26 @@ class MainPage(webapp2.RequestHandler):
         
 #End Examples of webapp2 classes
      
-        
+    
+#make sure to set your secret key for Flask
 app.secret_key = 'your-secret-key'
 
-
-#Here you'll change your old webapp2 handler to a Flask handler and call either the webappGet function or the webappPost function       
+#your main page has to be handled individually
 @app.route('/',methods=['GET','POST'])    
 def MainDef():
-    if request.method == 'GET':
-        #here you'll create an instince of each class you want to use and then pass the instance through webappGet or webappPost
-        daPage= MainPage()
-        return webappGet(daPage)
-
-    if request.method == 'POST':
-        daPage= MainPage()
-        return webappPost(daPage)
+    return webapp(MainPage())
+#Here you can change your old webapp2 handler to a Flask handler. Make sure to remove your main page
+@app.route('/<searchURL>',methods=['GET','POST'])    
+def RouteDef(searchURL):    
+    app = webapp2.WSGIApplication([
+    ('/FirstPage', FirstPage),
+    ('/SecondPage', SecondPage),
+    ('/test', Test),
+    ]
+    , searchURL=searchURL ) #when you paste in your old webapp2 handler make sure to remove 
+    return webapp(app())    #config, debug, ect. and add searchURL=searchURL
+"""
+You can handle pages individually like this as well
 
 @app.route('/FirstPage',methods=['GET','POST'])    
 def FirstDef():
@@ -119,5 +124,5 @@ def TestDef():
         return webappGet(daPage)
     if request.method == 'POST':
         daPage= Test()
-        return webappPost(daPage)
+        return webappPost(daPage)"""
 
