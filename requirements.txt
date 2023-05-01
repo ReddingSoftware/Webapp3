@@ -1,4 +1,4 @@
-Flask==1.1.1
+Flask==2.3.2
 #in your actual requirements.txt you would list webapp3-flask but since we are using the
 #actual file for this example do not import it
 #webapp3-flask==0.1.9
